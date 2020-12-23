@@ -1,0 +1,256 @@
+header
+{
+    
+    border-bottom:1px solid black;
+}
+.utilisateur 
+{
+    display:flex;
+    justify-content:flex-end;
+    
+}
+.utilisateur li
+{
+    list-style:none;
+    border:1px solid black;
+    border-radius:3px;
+    padding:3px;
+    margin:3px;
+    background-color:gainsboro;
+    font-weight:bold;
+}
+.utilisateur a
+{
+    text-decoration: none;
+    color:red;
+    font-weight:bold;
+}
+.accueil
+{
+    font-weight:bold;
+    display: flex;
+    flex-direction: column;
+    
+}
+.paris
+{
+    margin-top: 15px;
+    margin-bottom:50px;
+    height: 300px;
+    width:95%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #1c1a19;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.border_h2
+{
+    border-top:1px solid black;
+    padding: 1em;
+}
+.actbloc
+{
+    
+    padding:10px;
+    margin: 15px ;
+    background-color:gainsboro;
+    border: solid 2px black;
+    border-radius: 10px;
+    font-size:15px;
+}
+.actbloc img
+{
+    border: solid 2px black;
+    
+    margin-right:10px;
+}
+.button
+{
+    display:flex;
+    justify-content:flex-end;
+}
+.button button
+{
+    border: 2px solid #333;
+    padding: 6px;
+    border-radius: 4px;
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+}
+.form
+{
+    text-align:center;
+}
+.form label {
+    font-weight: bold;
+}
+.form input[type="text"] , .form input[type="password"] 
+{  
+    width: 50%;
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+body
+{
+    background-image: url("img_css/fonddeg.jpg");
+    background-attachment:fixed;
+}
+main
+{
+    padding-bottom:60px;
+}
+.lien
+{
+    text-align:center;
+    font-weight:bold;
+}
+footer
+{
+    position:relative;
+    bottom:0;
+    width:100%;
+    padding-top:65px;
+    height:50px;
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+}
+.registre
+{
+    text-align:center;
+    margin:center; 
+}
+
+.suite
+{
+    text-decoration: none;
+    color:white;
+}
+.act1
+{
+    margin:15px;
+    margin-bottom:100px;
+    background-color:gainsboro;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding:10px;
+    font-size:15px;
+}
+.act1 img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+}
+.commentaire
+{
+    margin:50px;
+    border-top:1px solid black;
+    padding:20px;
+    text-align:center;
+    border:solid black 1px;
+    color:green;
+}
+.commentaire h2
+{
+    color:black;
+}
+#com
+{
+    height: 25px;
+    width:500px;
+}
+.commentaire_post
+{
+    margin:15px;
+    margin-bottom:100px;
+    background-color:gainsboro;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding:10px;
+    font-size:17px;
+    white-space:nowrap;
+}
+.newcomment
+{
+    border:1px solid black;
+    border-radius: 10px;
+    padding:5px;
+}
+
+.commentaire_post
+{
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: gainsboro;
+}
+
+@media all and (max-width: 1024px)
+{
+    #bloc_page
+    {
+        width: auto;
+       
+    }
+    .paris
+    {
+        display: none;
+    }
+    .actbloc
+{
+    
+    padding:auto;
+    margin: auto ;
+    background-color:gainsboro;
+    border: solid 2px black;
+    border-radius: 10px;
+    font-size:15px;
+}
+    .act1 img
+    {
+        display:none;
+    }
+    #com
+{
+    height: 10px;
+    width:100px;
+}
+#sub
+{
+    text-align:center;
+    font-size:10px;
+    height:20px;
+    width:50px;
+    white-space:normal; 
+}
+}
+.message
+{
+    text-align:center;
+    color:red;
+    font-style:italic;
+}
+.vote{
+    display:flex;
+    justify-content:flex-end;
+}
+.dislike
+{
+    text-decoration: none;
+    color:red;
+    font-weight:bold;
+    
+}
+.like
+{
+    text-decoration: none;
+    color:green;
+    font-weight:bold;
+}
