@@ -54,7 +54,7 @@ if ($acteur = $statementActeur->fetch())
         $data_dislike = $dislike->fetch();
     ?>   
     <button><div class="like"><?php echo $data_like['nb_like'];?> <a href="vote_cible.php?vote=1&id_acteur=<?=$acteur['id_acteur']?>">J'aime</a></div></button>
-    <button><div class="dislike"><?php echo $data_dislike['nb_dislike'];?> <a href="vote_cible.php?vote=-1&id_acteur=<?=$acteur['id_acteur']?>">J'aime pas</a></div></button>
+    <button><div class="dislike"><?php echo $data_dislike['nb_dislike'];?> <a href="vote_cible.php?vote=-1&id_acteur=<?=$acteur['id_acteur']?>">Je n'aime pas</a></div></button>
 
 </div>
 <?php

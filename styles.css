@@ -213,6 +213,9 @@ footer
     border-radius: 10px;
     font-size:15px;
 }
+.commentaire.post{
+    
+}
     .act1 img
     {
         display:none;
@@ -250,6 +253,7 @@ footer
 }
 .like
 {
+    text-decoration: none;
     color:green;
     font-weight:bold;
 }
