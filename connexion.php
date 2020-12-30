@@ -41,12 +41,7 @@
         </div>
         <p class="message">
         <?php
-                // if($idMessage == 1){
-                //     echo ('Identifiant incorrect');
-                // }
-                // if($idMessage == 2){
-                //     echo ('Deconnexion réussi');
-                // }
+                
                 switch ($idMessage)
                 { 
                     case 1: // dans le cas où $idMessage vaut 1
@@ -56,7 +51,7 @@
                     case 2: // dans le cas où $idMessage vaut 2
                         echo "Deconnexion réussi";
                     break;
-                    case 3:
+                    case 3: // dans le cas où $idMessage vaut 3
                         echo "Inscription validée";
                     break;
                     

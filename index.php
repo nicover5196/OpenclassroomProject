@@ -34,7 +34,6 @@ require_once 'connect_bdd.php'; // on inclut la base de données
 
     <body>
 
-        
         <?php require_once 'header.php'; ?>
 
 <!-- Page d'accueil -->
@@ -87,13 +86,10 @@ require_once 'connect_bdd.php'; // on inclut la base de données
                     while ($acteur = $PDO_listeActeur->fetch())
                 {
                     $lien = '<a href="acteur.php?id=' . $acteur['id_acteur'] . '">Lire la suite </a>';
-                    // $lien = '<a href="acteur.php?id=' . $acteur['id_acteur'] . '">' . $acteur['acteur'] .  '</a></br>';
                     $reponse = $bdd->query('SELECT * FROM acteur');
 
             ?>
             
-            
-
             <div class="actbloc">
                 
                 

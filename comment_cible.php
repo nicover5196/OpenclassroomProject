@@ -13,60 +13,32 @@
      ));
      $data = $req->fetch();
 
-     // Si il n'y a pas de commentaire 
-     if($data == false){
-         // On insert dans la table post les infos
-       $insert = $bdd->prepare('INSERT INTO post(id_user, id_acteur, date_add, post) VALUES(?,?,?,?)');
+     
+     if($data == false){ // Si il n'y a pas de commentaire 
+         
+       $insert = $bdd->prepare('INSERT INTO post(id_user, id_acteur, date_add, post) VALUES(?,?,?,?)'); // On insert dans la table post les infos
        $insert->execute(array(
            $_SESSION['id'],
            $hidden,
            date('Y-m-d h:i:s'),
            htmlspecialchars($_POST['post'])
        ));
-       // On redirige sur acteur.php + id + msg modif
-       header("Location: acteur.php?id=$hidden&modif=1");
+       
+       header("Location: acteur.php?id=$hidden&modif=1"); // On redirige sur acteur.php + id + msg modif
        exit(); 
-     }else{
-       // On update l'article
+     }else{ //Sinon, on update l'article
+       
        $req = $bdd->prepare('UPDATE post SET post = :post WHERE id_acteur = :id_acteur AND id_user = :id_user');
        $req->execute(array(
            'post' => htmlspecialchars($_POST['post']),
            'id_acteur' => $hidden,
            'id_user' => $_SESSION['id']
        ));
-       // On redirige sur acteur.php + id + msg modif 
-       header("Location: acteur.php?id=$hidden&modif=2");
+       
+       header("Location: acteur.php?id=$hidden&modif=2"); // On redirige sur acteur.php + id + msg modif 
        exit();
      }
  }
  
-// session_start();
-// require_once 'connect_bdd.php';
-// // var_dump($_POST);
-// // var_dump($_SESSION);
-// // INSERT INTO `post` (`id_post`, `id_user`, `id_acteur`, `date_add`, `post`) VALUES (NULL, '1', '1', CURRENT_TIMESTAMP, 'Bonjour les amis');
-// $req = $bdd->prepare('SELECT * FROM `post` WHERE id_user = :id_user AND id_acteur = :id_acteur');
-// $req->bindParam(':id_user', $_SESSION['id']);
-// $req->bindParam(':id_acteur', $_POST['id_acteur']);
-// $req->execute();
-// $user = $req->fetch();
-// var_dump($user);
-// if($user == false)
-// {
-//     $req = $bdd->prepare('INSERT INTO post (id_user, id_acteur, date_add, post) VALUES(:id_user, :id_acteur,NOW(), :post)');
-//     $req->execute(array('id_user' => $_SESSION['id'], 'id_acteur' => $_POST['id_acteur'],'post' => $_POST['post']));
-//     header('Location: acteur.php?id='.$_POST['id_acteur']);
-//     exit();
-// }
-// else
-// {
-//     $req = $bdd->prepare('UPDATE post SET post = :post WHERE post AND id_post = :id_post');
-//     $req->execute(array('post' => $_POST['post']));
-//     header('Location: acteur.php?id='.$_POST['id_acteur'], 'id_post' => '?');
-//     exit();
-// }
-// UPDATE `post` SET `post` = 'Coucou' WHERE `post`.`id_post` = 11;
-
-// header('Location: acteur.php?id='.$_POST['id_acteur']);
 ?>
 

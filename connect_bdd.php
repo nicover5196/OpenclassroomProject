@@ -1,4 +1,5 @@
 <?php
+
 // On se connecte à MySQL
 
     try
