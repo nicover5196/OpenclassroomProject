@@ -141,6 +141,14 @@ footer
     padding:10px;
     font-size:15px;
 }
+.mdp{
+    text-align:center;
+    margin-top:10px;
+}
+.centre{
+    text-align:center;
+    margin-top:10px;
+}
 .act1 img
 {
     display: block;
@@ -197,42 +205,40 @@ footer
     #bloc_page
     {
         width: auto;
-       
     }
     .paris
     {
         display: none;
     }
     .actbloc
-{
-    
-    padding:auto;
-    margin: auto ;
-    background-color:gainsboro;
-    border: solid 2px black;
-    border-radius: 10px;
-    font-size:15px;
-}
-.commentaire_post{
-    font-size:12px;
-}
+    {
+        padding:auto;
+        margin: auto ;
+        background-color:gainsboro;
+        border: solid 2px black;
+        border-radius: 10px;
+        font-size:15px;
+    }
+    .commentaire_post{
+        font-size:12px;
+    }
     .act1 img
     {
         display:none;
     }
     #com
-{
-    height: 10px;
-    width:100px;
-}
-#sub
-{
-    text-align:center;
-    font-size:10px;
-    height:20px;
-    width:50px;
-    white-space:normal; 
-}
+    {
+        height: 10px;
+        width:100px;
+    }
+    #sub
+    {
+        text-align:center;
+        font-size:10px;
+        height:20px;
+        width:50px;
+        white-space:normal; 
+    }
 }
 .message
 {

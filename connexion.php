@@ -64,7 +64,7 @@
 
         <div class="lien">
 
-            <p><a href="forgetp3.php">Mot de passe oublié ?</a></p>
+            <p><a href="forget.php">Mot de passe oublié ?</a></p>
             <p>Pas encore inscrit ? <a href="registre.php">S'inscrire</a></p>
 
         </div>    

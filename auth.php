@@ -6,8 +6,8 @@ require_once 'connect_bdd.php'; // on inclut la base de données
     $req->execute(array('username' => $_POST['username']));
     $resultat = $req->fetch();
 
-    $passwordcorrect = $_POST['password'] == $resultat['password']; // On définit le password par rapport au post de l'utilisateur sur le formulaire comprenant password
-
+    $passwordcorrect = password_verify($_POST['password'], $resultat['password']);
+    
     if (!$resultat) 
     {
         header ('Location: connexion.php?idMessage=1'); // Si c'est différent de la variable, on redirige sur la page de connexion en affichant un message correspondant à la valeur 1

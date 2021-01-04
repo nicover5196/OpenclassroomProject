@@ -86,7 +86,6 @@ require_once 'connect_bdd.php'; // on inclut la base de données
                     while ($acteur = $PDO_listeActeur->fetch())
                 {
                     $lien = '<a href="acteur.php?id=' . $acteur['id_acteur'] . '">Lire la suite </a>';
-                    $reponse = $bdd->query('SELECT * FROM acteur');
 
             ?>
             
@@ -107,7 +106,7 @@ require_once 'connect_bdd.php'; // on inclut la base de données
 
                 }
 
-                $reponse->closeCursor(); // Termine le traitement de la requête
+                $PDO_listeActeur->closeCursor(); // Termine le traitement de la requête
 
             ?>
 
